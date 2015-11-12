@@ -9,8 +9,8 @@ SRC_URI = "http://samba.org/ftp/${BPN}/talloc-${PV}.tar.gz"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/LGPL-3.0;md5=bfccfe952269fff2b407dd11f2f3083b \
                     file://${COREBASE}/meta/files/common-licenses/GPL-3.0;md5=c79ff39f19dfec6d293b95dea7b07891"
 
-SRC_URI[md5sum] = "5dffb86414218a91864ed4453ba9be07"
-SRC_URI[sha256sum] = "3e29ce6c3ba3c4f7c2d57ce8cf0fbc24c86618c519f2b2fb6a459025488b6174"
+SRC_URI[md5sum] = "3e285de2228ae67ff0a0f5cec658f627"
+SRC_URI[sha256sum] = "7aa5f75b22d4ef9c737b25515f2a2837ddc13014ff4ac6e58dd9e311f41f2cb0"
 
 inherit waf-samba
 
@@ -31,10 +31,10 @@ EXTRA_OECONF += "--disable-rpath \
 PACKAGES += "pytalloc pytalloc-dbg pytalloc-dev"
 
 FILES_pytalloc = "${libdir}/python${PYTHON_BASEVERSION}/site-packages/* \
-                  ${libdir}/libpytalloc-util.so.2 \
-                  ${libdir}/libpytalloc-util.so.2.1.1 \
+                  ${libdir}/libpytalloc-util${SOLIBS} \
+                  ${libdir}/libpytalloc-util${SOLIBS} \
                  "
 FILES_pytalloc-dbg = "${libdir}/python${PYTHON_BASEVERSION}/site-packages/.debug \
-                      ${libdir}/.debug/libpytalloc-util.so.2.1.1"
-FILES_pytalloc-dev = "${libdir}/libpytalloc-util.so"
+                      ${libdir}/.debug/libpytalloc-util${SOLIBS}"
+FILES_pytalloc-dev = "${libdir}/libpytalloc-util${SOLIBSDEV}"
 RDEPENDS_pytalloc = "python"
