@@ -1,7 +1,7 @@
 DESCRIPTION = "nodeJS Evented I/O for V8 JavaScript"
 HOMEPAGE = "http://nodejs.org"
 LICENSE = "MIT & BSD & Artistic-2.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=14115ff11211df04b031ec7d40b6d31b"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=ee90ba97d933fc8d56e97812b7dd62e9"
 
 DEPENDS = "openssl"
 
@@ -9,8 +9,8 @@ SRC_URI = "http://nodejs.org/dist/v${PV}/node-v${PV}.tar.gz \
     file://enable-armv5e-build.patch \
     file://no-registry.patch \
 "
-SRC_URI[md5sum] = "5523ec4347d7fe6b0f6dda1d1c7799d5"
-SRC_URI[sha256sum] = "b23d64df051c9c969b0c583f802d5d71de342e53067127a5061415be7e12f39d"
+SRC_URI[md5sum] = "7c46c158e4c9a44cfbd039951c13dfe6"
+SRC_URI[sha256sum] = "00e709353435b436b5bbf5e62272ebb15fe801065422c4c2afe2b93456210cb1"
 
 S = "${WORKDIR}/node-v${PV}"
 
